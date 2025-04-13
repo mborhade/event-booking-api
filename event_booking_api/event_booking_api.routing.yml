@@ -1,0 +1,32 @@
+event_booking_api.events:
+  path: '/api/events'
+  defaults:
+    _controller: '\Drupal\event_booking_api\Controller\EventController::listEvents'
+    _title: 'List Events'
+  methods: [GET]
+  requirements:
+    _permission: 'access content'
+
+event_booking_api.event_create:
+  path: '/api/events'
+  defaults:
+    _controller: '\Drupal\event_booking_api\Controller\EventController::createEvent'
+  methods: [POST]
+  requirements:
+    _permission: 'administer nodes'
+
+event_booking_api.attendees:
+  path: '/api/attendees'
+  defaults:
+    _controller: '\Drupal\event_booking_api\Controller\AttendeeController::registerAttendee'
+  methods: [POST]
+  requirements:
+    _access: 'TRUE'
+
+event_booking_api.bookings:
+  path: '/api/bookings'
+  defaults:
+    _controller: '\Drupal\event_booking_api\Controller\BookingController::bookEvent'
+  methods: [POST]
+  requirements:
+    _access: 'TRUE'

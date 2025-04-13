@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="web/core/tests/bootstrap.php"
+         colors="true"
+         stopOnFailure="false">
+  <testsuites>
+    <testsuite name="Event Booking API">
+      <directory>modules/custom/event_booking_api/tests/src</directory>
+    </testsuite>
+  </testsuites>
+  <php>
+    <env name="SIMPLETEST_BASE_URL" value="http://localhost" />
+    <env name="SIMPLETEST_DB" value="mysql://db_user:db_pass@localhost/db_name" />
+    <env name="BROWSERTEST_OUTPUT_DIRECTORY" value="/tmp" />
+  </php>
+</phpunit>

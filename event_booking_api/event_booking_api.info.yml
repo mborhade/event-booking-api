@@ -1,0 +1,9 @@
+name: 'Event Booking API'
+type: module
+description: 'Provides a RESTful API for event booking system.'
+core_version_requirement: ^10
+package: Custom
+dependencies:
+  - node
+  - field
+  - user

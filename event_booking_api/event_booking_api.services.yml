@@ -1,0 +1,4 @@
+services:
+  event_booking_api.booking_service:
+    class: Drupal\event_booking_api\Service\BookingService
+    arguments: ['@entity_type.manager']
